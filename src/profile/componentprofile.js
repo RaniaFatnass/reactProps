@@ -1,11 +1,15 @@
 import React from 'react'
 import PropTypes from 'prop-types';
 
-const componentprofile = (props)=>{
+const Componentprofile = (props)=>{
 
       return(
+            {props.handleName(props.fullname)}
         <div>
-    <p>{props.children}</p>
+            <p>{props.fullname}</p>
+            <p>{props.bio}</p>
+            <p>{props.profession}</p>
+    {props.children}
       </div>
       );
       }
@@ -22,4 +26,4 @@ const componentprofile = (props)=>{
       profession: "nnn"
       }; 
       
-      export default componentprofile;
+      export default Componentprofile;
