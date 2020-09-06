@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 import image from './images/image1.jpg';
-import componentprofile from './profile/componentprofile';
+import Componentprofile from './profile/Componentprofile';
 
 function App() {
   const profile = {
@@ -11,16 +11,14 @@ function App() {
   };
 
 
-  const handleName = e => {
-    alert(profile.fullname);
+  const handleName = name => {
+    alert(name);
   };
  
   return (
     <div className="App">
-    <componentprofile profile={profile}>
+    <Componentprofile profile={profile} handleName={handleName} >
     <img style={{width:"500px",height:"300px",  border: "1px solid black", marginTop: "50px"}}src={image}/>
-    <br></br>
-    <a onClick={handleName}>Fatnassi Rania</a>
     </componentprofile>
     </div>
   );
